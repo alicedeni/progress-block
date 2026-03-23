@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="card" aria-label="Progress">
+      <h1 class="title">Progress</h1>
+      <div class="card__body">
+        <div class="card__gauge">
+          <div id="progress-root" class="progress-host"></div>
+        </div>
+        <form class="controls" onsubmit="return false" aria-label="Controls">
+          <label class="control-row" for="control-value">
+            <input id="control-value" class="value-input" type="number" inputmode="numeric" min="0" max="100" value="60" autocomplete="off">
+            <span class="control-row__label">Value</span>
+          </label>
+          <label class="control-row" for="control-animate">
+            <span class="switch">
+              <input id="control-animate" class="switch__input" type="checkbox">
+              <span class="switch__slider" aria-hidden="true"></span>
+            </span>
+            <span class="control-row__label">Animate</span>
+          </label>
+          <label class="control-row" for="control-hide">
+            <span class="switch">
+              <input id="control-hide" class="switch__input" type="checkbox">
+              <span class="switch__slider" aria-hidden="true"></span>
+            </span>
+            <span class="control-row__label">Hide</span>
+          </label>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="progress.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
